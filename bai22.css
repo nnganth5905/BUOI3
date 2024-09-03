@@ -1,0 +1,44 @@
+{
+    margin:0;
+    padding: 0;
+}
+body{
+    font-family: 'Times New Roman';
+
+}
+.ul1{
+    background: black;
+    list-style-type:none;
+    text-align: center;
+}
+menu li{
+color: white;
+display: inline-block;
+width: 120px;
+height: 40px;
+line-height: 40px;
+margin-left: -5px;
+}
+#menu li {
+
+    color: #f1f1f1;
+  
+    float: left;
+  
+    width: 120px;
+  
+    height: 40px;
+  
+    line-height: 40px;
+  
+  }
+  h1{
+    text-align: center;
+  }
+  b{
+    color: gray;
+  }
+  ul{
+    color: gray;
+    
+  }
