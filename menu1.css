@@ -1,0 +1,138 @@
+
+.alo {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #c99090;
+  }
+  
+  .alo1 {
+    float: left;
+  }
+  
+ .alo1 a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .alo1 a:hover:not(.active) {
+    background-color: #000000;
+  }
+  
+  .active {
+    background-color: #04AA6D;
+  }
+  .ul2{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    color: black;
+  }
+  .hi{
+    list-style-type: none;
+    overflow: hidden;
+    background-color: white;
+    padding: 16px 16px;
+    
+  }
+  
+  .u {
+    float: left;
+    margin-top: 0px;
+  }
+  .u a {
+    display: block;
+    color: #666;
+    text-align: center;
+    text-decoration: none;
+    padding: 16px 16px;
+  }
+  
+  .u a:hover:not(.active) {
+    background-color: #04AA6D;
+  }
+  #header button #switch-mode{
+    outline: none;
+    border: none;
+    background: none;
+    cursor :pointer
+  }
+  .ngang {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: rgb(205, 205, 205);
+
+  }
+  
+  .ngang a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  
+  .ngang a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  .ngang a:hover:not(.active) {
+    background-color: #7f7f7f;
+  }
+  .overflow{
+    overflow:auto;
+    width: 200px;
+    height: 1000px;
+    overflow: auto;
+  }
+  .overflowngang{
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 300%;
+    max-height:300%;
+  }
+  .outer-square {
+    width: 700px;
+    height: 500px;
+    background-color: gray;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    margin-left: 400px;
+}
+
+.inner-square {
+    width: 700px;
+    height: 350px;
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    float: right;
+}
+.chu{
+  float:center;
+  color: black;
+  text-align: center;
+  margin-top: -1000px;
+  overflow:auto;
+  
+}
+
