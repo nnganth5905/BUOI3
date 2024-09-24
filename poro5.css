@@ -1,7 +1,6 @@
 body {
-  background-color: rgb(16, 2, 78);
-  background-image: linear-gradient(rgb(16, 2, 78),rgb(145, 4, 145) );
-  margin-left: 260px;
+  background-color: rgb(251, 255, 198);
+  background-image: linear-gradient(rgb(251, 255, 198),rgb(255, 197, 255) );
 
 }
 .thanhngang{
@@ -38,11 +37,11 @@ body {
     border-radius: 50%;
     object-fit: cover; /
     border: 3px solid #ddd; 
-    margin-left: 350px;
+    margin-left: 600px;
     
 }
 .circle-img:hover {
-    box-shadow: 0 12px 16px 0 rgba(233, 231, 231, 0.523),0 17px 50px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 12px 16px 0 rgba(255, 255, 255, 0.523),0 17px 50px 0 rgba(255, 255, 255, 0.19);
 
   } 
   .caption {
@@ -59,7 +58,7 @@ body {
   .alo2{
     max-height: 1020px ;
     max-width: 1000px ;
-    background-color: rgba(212, 212, 212, 0.563) ;
+    background-color: rgba(255, 255, 255, 0.453) ;
     color:black;
     float:center;
     text-align: center;
@@ -67,14 +66,14 @@ body {
     border-radius: 18px;
     border: 10px ;
     border-color: whitesmoke;
-    align-items: center;
+    margin-left: 250px;
 }
 .dropdown {
   margin-top: 15px;
   float: left;
   overflow: hidden;
-  margin: 6px;
   border-radius: 15px;
+  margin-left:300px;
 }
 
 .dropdown .dropbtn {
@@ -128,24 +127,20 @@ a {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #d2000081;
-  width: 800px;
- 
-  margin-left: 100px;
+  background-color: #ea3232d8;
+  width: 100%;
+  display: flex; 
+  justify-content: center; 
 }
 .alo1{
   float:left;
-  margin-left: 11px;
 }
 .alo1 a {
-  display: block;
   color: white;
   text-align: center;
   padding: 14px 20px;
   text-decoration: none;
-  float: center;
-  display: block-inline;
-  
+  display: inline-block;
 }
 .alo1:hover {
   background-color: #d20000c6;
@@ -153,7 +148,7 @@ a {
 .cuoi{
   width:2000px;
   height: 100px;
-  background-color: rgb(88, 88, 88);
+  background-color: rgb(136, 136, 136);
   margin-left:-500px;
   display: flex; 
   justify-content: center;
