@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+        }
+    .main{
+        width: 95%;
+        background-color: rgb(152, 152, 152);
+        color: black;
+        height: 100vh;
+        margin-bottom: 20px;
+        display: flex;
+        gap:200px;
+        align-items: center;
+        flex-direction: column;
+        position: relative;  
+    }
+    .text{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 60px;
+        margin-top: 300px;
+    }
+    .bar{
+        padding-bottom: 110px;
+        padding-top:100px ;
+        position: fixed;
+       right: 7cm ;
+       z-index: 2;
+    }
+    .lop1{
+        opacity: 0;
+            background-color: black;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+            transition: opacity 0.3s ease;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap:30px;
+    }
+    .bar:hover~ .lop1 {
+    opacity: 0.7;
+}
+    div.lop1 div{
+        position: absolute;
+        z-index: 3;
+        color: rgb(255, 255, 255);
+    }
+   a{
+    text-decoration: none;
+    color: white;
+    font-size: 50px;
+   }
+   a :hover{
+    text-decoration: underline;
+   }
+    </style>
+</head>
+<body> 
+    <section class="container"> 
+    <div class="main">
+        <div class="bar">
+            <i class="fa fa-bars" style="font-size: 70px; color: #000000;"></i>
+        </div>
+    
+<div class="text">Clear thinking at the wrong moment can stifle creativity_</div>
+<div class="lop1" >
+    <a style="text-decoration:underline;" href="">Home</a>
+    <a href="">Portfolio</a>
+    <a href="">Team</a>
+    <a href="">Services</a>
+    <a href="">Blog</a>
+    <a href="">Contact</a>
+    <a href="">Buy now</a>
+    <a href="" style="color: rgb(100, 100, 100)">Search...</a>
+</div>
+    </div>
+</section>
+<script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+</script>
+<script>
+    document.onkeydown = function(e) {
+      // Chặn F12
+      if (e.keyCode === 123) {
+        return false;
+      }
+      // Chặn Ctrl + Shift + I
+      if (e.ctrlKey && e.shiftKey && e.key === 'I' || e.key === 'i') {
+        return false;
+      }
+      // Chặn Ctrl + U (Xem mã nguồn)
+      if (e.ctrlKey && (e.key === 'U' || e.key === 'u')) {
+        return false;
+      }
+      // Chặn Ctrl + Shift + J (Mở console)
+      if (e.ctrlKey && e.shiftKey && (e.key === 'J' || e.key === 'j')) {
+        return false;
+      }
+    };
+  </script>
+</body>
+</html>
