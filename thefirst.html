@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đoán số</title>
+</head>
+<body>
+    <h1>Hãy đoán xem</h1>
+    <p>Nhập số từ 1 đến 10:</p>
+    <input type="number" id="guessInput" min="1" max="10">
+    <button onclick="kiemTraDoan()">Gửi</button>
+    <p id="ketQua"></p>
+
+    <script src="the first.js"></script>
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
+    </script>
+    <script>
+        document.onkeydown = function(e) {
+          // Chặn F12
+          if (e.keyCode === 123) {
+            return false;
+          }
+          // Chặn Ctrl + Shift + I
+          if (e.ctrlKey && e.shiftKey && e.key === 'I' || e.key === 'i') {
+            return false;
+          }
+          // Chặn Ctrl + U (Xem mã nguồn)
+          if (e.ctrlKey && (e.key === 'U' || e.key === 'u')) {
+            return false;
+          }
+          // Chặn Ctrl + Shift + J (Mở console)
+          if (e.ctrlKey && e.shiftKey && (e.key === 'J' || e.key === 'j')) {
+            return false;
+          }
+        };
+      </script>
+</body>
+</html>
