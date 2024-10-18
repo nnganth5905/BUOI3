@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển ảnh</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .container {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+        }
+        img {
+             width: 100%;
+             border-radius: 10px;
+            }
+        .move{
+            display: none;
+        }
+        .prev, .next{
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .prev{
+            left: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .next{
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover{
+            background-color: deepskyblue;
+        }
+        .move{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div class="move">
+        <img src=https://images.thedirect.com/media/article_full/gumball.jpg alt="gumball">
+       </div>
+
+        <div class="move">
+            <img src="https://cdnmedia.baotintuc.vn/2017/07/24/16/50/1Phim-hoat-hinh-Ben-10.jpg" alt="ben10">
+        </div>
+
+        <div class="move">
+            <img src="https://cdn.zenquiz.net/external/2017/02/07/12/f294eca0-ed33-11e6-8cb3-050901070303-compressed.jpg" alt="siêu nhân hải tặc">
+        </div>
+        
+        <div class="move">
+            <img src="https://static.wikia.nocookie.net/teentitans/images/3/39/Site-community-image/revision/latest/scale-to-width-down/1200?cb=20230130161641" alt="titans">
+        </div>
+        
+        <div class="move">
+            <img src="https://static1.dienanh.net/upload/202207/34944e5f-5369-4668-a599-97f503dc0190.jpg" alt="pororo">
+        </div>
+
+        <div class="move">
+            <img src="https://image.plo.vn/w1000/Uploaded/2024/xpckxpiu/2019_06_08/tom-va-jerry_ZTTN.jpg.webp" alt="tom&jerry">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+showSlides(slideIndex);
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+    let slides = document.getElementsByClassName("move");
+
+    if (n >= slides.length) {
+        slideIndex = 0; 
+    }
+
+    if (n < 0) {
+        slideIndex = slides.length - 1; 
+    }
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+    }
+
+    slides[slideIndex].style.display = "block"; 
+    }
+    </script>
+</body>
+</html>

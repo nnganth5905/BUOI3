@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form đăng ký</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 400px;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        .container h1 {
+            text-align: center;
+            color: #800080;
+        }
+        .container label {
+            display: block;
+            margin-top: 10px;
+        }
+        .container input, .container select, .container textarea {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+        }
+        .container .group, .container .checkbox {
+            display: flex;
+            gap: 10px;
+        }
+        .container .button {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .container button {
+            padding: 5px 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1> FORM ĐĂNG KÝ</h1>
+        <form id="signup">
+            <label for="lastname">Họ:</label>
+            <input type="text" id="lastname" name="lastname" required>
+
+            <label for="firstname">Tên:</label>
+            <input type="text" id="firstname" name="firstname" required>
+
+            <label>Ngày sinh:</label>
+            <select id="day" name="day">
+                <script>
+                    for(let i = 1; i <= 31; i++){
+                        document.write(`<option value="${i}">${i}</option>`);
+                    }
+                </script>
+            </select>
+            <select id="month" name="month">
+                <option value="1">Tháng 1</option>
+                <option value="2">Tháng 2</option>
+                <option value="3">Tháng 3</option>
+                <option value="4">Tháng 4</option>
+                <option value="5">Tháng 5</option>
+                <option value="6">Tháng 6</option>
+                <option value="7">Tháng 7</option>
+                <option value="8">Tháng 8</option>
+                <option value="9">Tháng 9</option>
+                <option value="10">Tháng 10</option>
+                <option value="11">Tháng 11</option>
+                <option value="12">Tháng 12</option>
+            </select>
+            <select id="year" name="year">
+                <script>
+                    for(let i = 1970; i <= 2023; i++){
+                        document.write(`<option value="${i}">${i}</option>`);
+                    }
+                </script>
+            </select>
+            <label>Giới tính:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="gender" value="Nam" required>Nam</label>
+                <label><input type="radio" name="gender" value="Nữ" required>Nữ</label>
+            </div>
+
+            <label for="phone">Số điện thoại</label>
+            <input type="tel" id="phone"name="phone" pattern="[0-9]{10}" placeholder="Ví dụ: 0123456789" required>
+
+            <label>Sở thích:</label>
+        <div class="checkbox">
+            <lable><input type="checkbox" name="hobby" value="Đọc sách"> Đọc sách</lable>
+            <lable><input type="checkbox" name="hobby" value="Xem phim"> Xem phim</lable>
+            <lable><input type="checkbox" name="hobby" value="Nghe nhạc"> Nghe nhạc</lable>
+            <lable><input type="checkbox" name="hobby" value="Đá bóng"> Đá bóng</lable>
+        </div>
+
+        <label for="other">Khác:</label>
+        <textarea id="other" name="other" row="3"></textarea>
+
+        <div class="button">
+            <button type="button" onclick="submitForm()">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
+        </form>
+    </div>
+
+    <script>
+        function submitForm(){
+            const lastName = document.getElementById('lastName').value;
+            const firstName = document.getElementById('firstName').value;
+            const phone = document.getElementById('phone').value;
+
+            if(!/^^[0-9]{10}$/.test(phone)){
+                alert('Số điện thoạt không hợp lệ. Vui lòng nhập lại');
+                return;
+            }
+            const gender = document.querySelector('input[name="gender"]:checked')?.value;
+            const selectedHobbies = Array.from(document.querySelectorAll('input[name="hobby"]:checked'))
+                .map(hobby => hobby.value);
+
+            alert(`Họ: ${lastName}\nTên: ${firstName}\nGiới tính: ${gender}\nSố điện thoại: ${phone}\nSở thích: ${selectedHobbies.join(', ')}\nKhác: ${document.getElementById('other').value}`);
+
+        }
+    </script>
+</body>
+</html>
