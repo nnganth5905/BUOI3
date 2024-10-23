@@ -124,7 +124,11 @@ a {
 .thanhmenu{
   max-width:100%;
   max-height: 90px;
-  background-color: #deffc6;
+  background-color: rgba(255, 255, 255, 0.712);
+  overflow: hidden;
+  position: sticky;
+  top: 0; 
+  z-index: 1000;
 }
 .sauactive{
   list-style-type: none;
@@ -144,7 +148,7 @@ a {
   padding: 14px 20px;
   text-decoration: none;
   display: inline-block;
-  font-size: 24px;
+  font-size: 20px;
 }
 .alo1 a:hover {
   background-color: #e50505ec;
@@ -181,4 +185,10 @@ a {
 }
 .N{
   margin-left:300px;
+}
+@media only screen and (max-width: 768px) {
+  .thanhngang {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
